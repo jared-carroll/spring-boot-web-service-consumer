@@ -1,0 +1,17 @@
+= Spring Boot Web Service Consumer
+
+Spring Boot app to consume a SOAP service
+
+== Run the app
+
+  ./gradlew bootRun
+
+An `ApplicationRunner` bean in `App` uses a service to make a SOAP request to an online http://wsf.cdyne.com/WeatherWS/Weather.asmx[weather service]
+
+== Generate JAXB-compliant POJOs
+
+Generate POJOs to represent the SOAP request and response payloads
+
+  ./gradlew genJaxb
+
+This task is run automatically when you run the app with `./gradlew bootRun` or build the app JAR with `./gradlew assemble`.
